@@ -1,4 +1,4 @@
-package package_Main;
+package package_Database;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import package_VO.CustomerVO;
 
-public class Datavase {
+public class Database {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
