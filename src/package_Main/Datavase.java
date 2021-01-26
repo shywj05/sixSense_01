@@ -1,4 +1,4 @@
-package Main;
+package package_Main;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
-import Method.CustomerVO;
+import package_VO.CustomerVO;
 
 public class Datavase {
 

@@ -1,4 +1,4 @@
-package Method;
+package package_VO;
 
 public class AdminVO {
 	// 관리자 아이디 이 클래스에서만 사용

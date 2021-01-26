@@ -1,4 +1,4 @@
-package Method;
+package package_VO;
 
 //장바구니
 public class ShopListVO {

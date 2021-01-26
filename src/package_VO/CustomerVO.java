@@ -1,4 +1,4 @@
-package Method;
+package package_VO;
 
 //손님
 public class CustomerVO {

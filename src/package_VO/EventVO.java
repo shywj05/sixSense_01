@@ -1,4 +1,4 @@
-package Method;
+package package_VO;
 
 public class EventVO {
 	private int num;
