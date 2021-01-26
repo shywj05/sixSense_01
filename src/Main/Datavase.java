@@ -68,7 +68,6 @@ public class Datavase {
 		
 		System.out.println(cusVO.size());
 		
-		
 		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 		
 		Calendar time = Calendar.getInstance();
