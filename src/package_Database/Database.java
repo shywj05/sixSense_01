@@ -9,7 +9,7 @@ import java.util.Scanner;
 import package_VO.CustomerVO;
 
 public class Database {
-	//diq
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
