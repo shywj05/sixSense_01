@@ -1,10 +1,12 @@
-package Method;
+package Main;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
+
+import Method.CustomerVO;
 
 public class Datavase {
 
