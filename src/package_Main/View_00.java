@@ -33,6 +33,7 @@ public class View_00 {
 		System.out.println("[ 1 ] 로그인");
 		System.out.println("[ 2 ] 회원가입");
 		System.out.println("[ 3 ] 종료");
+		
 		if (!"".equals(message)) {
 			System.out.println();
 			System.out.println(message);
