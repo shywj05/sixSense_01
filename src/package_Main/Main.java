@@ -1,5 +1,6 @@
 package package_Main;
 
-public class View_00 {
+public class Main {
 
+	
 }
