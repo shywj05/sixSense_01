@@ -3,7 +3,7 @@ package package_Main;
 import java.util.Scanner;
 
 public class View_00 {
-
+//박상빈 주석
 	/**
 	 *  1. 로그인
 		2. 회원가입
@@ -11,11 +11,24 @@ public class View_00 {
 	 * @param
 	 */
 	Scanner sc = new Scanner(System.in);
-	
+	int iInput() {
+		int input;
+		while (true) {
+			try {
+				Scanner scanner = new Scanner(System.in);
+				input = scanner.nextInt();
+				break;
+			} catch (Exception e) {
+				System.out.println();
+				System.out.println("숫자만 입력해주세요.");
+			}
+		}
+		return input;
+	}
 	void mainScreen() {
 		String message = "";
 		while(true){
-		System.out.println("과자사세요");
+		System.out.println("메인화면");
 		System.out.println();
 		System.out.println("[ 1 ] 로그인");
 		System.out.println("[ 2 ] 회원가입");
@@ -25,8 +38,8 @@ public class View_00 {
 			System.out.println(message);
 			message = "";
 		}
-		int nm = sc.nextInt();
-		switch (nm) {
+		
+		switch (iInput()) {
 		case 1:
 			login();
 			break;
@@ -52,7 +65,15 @@ public class View_00 {
 	 * @param
 	 */
 	private void login() {
-		System.out.println("login");
+		while(true){
+			System.out.println("로그인 화면");
+			System.out.println();
+			System.out.println("[1] 회원 메인");
+			System.out.println("[2] 관리자 메인");
+			System.out.println("[3] 메인화면");
+			
+			
+		}
 	}
 
 	/**
@@ -62,7 +83,7 @@ public class View_00 {
 	 */
 	
 	private void adminMain() {
-
+		
 	}
 
 	/**
