@@ -180,7 +180,7 @@ public class View_00 {
 	 * @param
 	 */
 	private void question() {
-
+				//실험실험시럼
 	}
 
 	/**

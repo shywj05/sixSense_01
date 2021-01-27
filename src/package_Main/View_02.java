@@ -6,8 +6,13 @@ public class View_02 {
 	 * @author 성원제1
 	 * @param
 	 */
+	
 	private void question() {
-
+		System.out.println("[ 1 ] 답변등록");
+		
+		System.out.println("[ 2 ] 답변수정");
+		
+		System.out.println("[ 3 ] 답변삭제");
 	}
 
 	/**
@@ -16,7 +21,7 @@ public class View_02 {
 	 * @param
 	 */
 	private void addQuestion() {
-
+		
 	}
 
 	/**
@@ -25,7 +30,7 @@ public class View_02 {
 	 * @param
 	 */
 	private void updateQuestion() {
-
+		
 	}
 
 	/**
