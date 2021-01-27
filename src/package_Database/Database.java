@@ -22,6 +22,7 @@ public class Database {
 		c1.setPassword("00001");
 		c1.setName("박상빈");
 		c1.setAddress("대전");
+		c1.setBirthday("930000-1000000");
 		c1.setPoint(10000);
 		
 		CustomerVO c2= new CustomerVO();
@@ -30,6 +31,7 @@ public class Database {
 		c2.setPassword("00001");
 		c2.setName("민선");
 		c2.setAddress("대전");
+		c2.setBirthday("930000-1000000");
 		c2.setPoint(10000);
 		
 		
@@ -39,6 +41,7 @@ public class Database {
 		c3.setPassword("00001");
 		c3.setName("원제");
 		c3.setAddress("대전");
+		c3.setBirthday("930000-1000000");
 		c3.setPoint(10000);
 		
 		
@@ -48,6 +51,7 @@ public class Database {
 		c4.setPassword("00001");
 		c4.setName("세웅");
 		c4.setAddress("대전");
+		c4.setBirthday("930000-1000000");
 		c4.setPoint(10000);
 		
 		CustomerVO c5= new CustomerVO();
@@ -56,6 +60,7 @@ public class Database {
 		c5.setPassword("00001");
 		c5.setName("학재");
 		c5.setAddress("대전");
+		c5.setBirthday("930000-1000000");
 		c5.setPoint(50000);
 		
 		
@@ -69,6 +74,7 @@ public class Database {
 		
 		System.out.println(cusVO.size());
 		
+		//날짜 구하는 방법
 		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 		
 		Calendar time = Calendar.getInstance();
