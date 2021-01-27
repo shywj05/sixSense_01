@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class View_00 {
 
+	
+	
+	
+	
 	/**
 	 *  1. 로그인
 		2. 회원가입
