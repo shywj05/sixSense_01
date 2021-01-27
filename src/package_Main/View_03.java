@@ -147,7 +147,7 @@ public class View_03 {
 	 * @param
 	 */
 	// 회원가입
-	private void signin(String name) {
+	private void signin() {
 
 	}
 }

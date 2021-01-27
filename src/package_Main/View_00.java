@@ -10,10 +10,11 @@ public class View_00 {
 	 * @author 박상빈1
 	 * @param
 	 */
-	Scanner sc = new Scanner(System.in);
 	
 	void mainScreen() {
+		Scanner sc = new Scanner(System.in);
 		String message = "";
+		
 		while(true){
 		System.out.println("과자사세요");
 		System.out.println();
@@ -43,6 +44,7 @@ public class View_00 {
 		}
 		
 		}
+		
 		
 	}
 
@@ -456,6 +458,6 @@ public class View_00 {
 	// 회원가입
 	private void signin() {
 		System.out.println("signin");
-		
+		//길민선길민선길민선길민선
 	}
 }
