@@ -1,6 +1,6 @@
 package package_VO;
 
-public class OrderVo {
+public class OrderVO {
 	private int OrderNumber;
 	private String customerID;
 	private String date;

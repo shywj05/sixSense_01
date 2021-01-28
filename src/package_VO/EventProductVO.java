@@ -1,6 +1,6 @@
 package package_VO;
 
-public class EventProduct_VO {
+public class EventProductVO {
 	private int productID;
 	private String name;
 	private int price;

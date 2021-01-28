@@ -1,87 +1,148 @@
 package package_Database;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Map;
 
+import package_VO.AdminVO;
+import package_VO.CategoryVO;
 import package_VO.CustomerVO;
+import package_VO.EventProductVO;
+import package_VO.EventVO;
+import package_VO.OrderVO;
+import package_VO.OrderedListVO;
+import package_VO.ProductVO;
+import package_VO.QuestionVO;
+import package_VO.RefundVO;
+
+
 
 public class Database {
 	
+	private final AdminVO admin = new AdminVO();
+	// admin 계정
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		//손님 저장 할곳
-		List<CustomerVO> cusVO = new ArrayList<>();
-		//손님 생성
-		CustomerVO c1= new CustomerVO();
+	private final List<CategoryVO> catelist = new ArrayList<>();
+	// 카테고리 목록 
+
+	private final List<CustomerVO> customerList = new ArrayList<>();
+	// 손님 목록
+
+	private final List<EventProductVO> eventProductList = new ArrayList<>();
+	// 이벤트상품 목록!
+
+	private final List<EventVO> eventList = new ArrayList<>();
+	// 이벤트 목록 
+
+	private final List<OrderedListVO> orderedListList = new ArrayList<>();
+	// 주문내역 리스트(어떤 상품을 몇개 구매 했는지 확인 리스트)
+
+	private final List<OrderVO> orderList = new ArrayList<>();
+	// 주문 정보(고객, 구매날짜, 주문번호 리스트)
+	
+	private final List<ProductVO> productList = new ArrayList<>();
+	// 상품 리스트
+	
+	private final List<QuestionVO> questionList = new ArrayList<>();
+	// 고객의 소리 리스트
+	
+	private final List<RefundVO> refundList = new ArrayList<>();
+	// 환불 내역 리스트
+	
+	/**
+	 * <code>adminLogin</code> 메서드는 해당 로그인 요청이 관리자 계정과 일치하는지 판별하는 메서드입니다.
+	 * 
+	 * @param loginInfo
+	 *            : user_id, user_pw를 담은 Map
+	 * @return 로그인에 성공한다면 true, 그렇지 않다면 false.
+	 * @author 박세웅
+	 */
+	public boolean adminLogin(Map<String, String> loginInfo) {
+		return admin.getId().equals(loginInfo.get("user_id")) 
+				&& admin.getPw().equals(loginInfo.get("user_pw"));
+	}
+	
+	
+	
+	
+	/**
+	 * <code>selectAllUser</code> 메서드는 모든 유저의 정보를 불러오기 위한 메서드입니다.
+	 * 
+	 * @return 모든 유저의 정보를 포함한 List
+	 * @author 이학재
+	 */
+	public List<CustomerVO> selectAllUser() {
+		List<CustomerVO> userList = new ArrayList<>();
+		for (CustomerVO user : this.customerList) {
+				userList.add(user);
+			
+		}
+		return userList;
+	}
+	
+	
+	
+	
+	
+	
+	/**
+	 * <code>selectUser</code> 메서드는 선택한 유저의 정보를 불러오기 위한 메서드입니다.
+	 * 
+	 * @param id
+	 *            : 사용자의 고유 id
+	 * @return 사용자의 정보를 담고 있는 UserVO 객체
+	 * @author 이학재
+	 */
+	public CustomerVO selectCustomer(String id) {
+		for (CustomerVO user : customerList) {
+			if (user.getCustomerID().equals(id)) {
+				return user;
+			}
+		}
+		return null;
+	}
+	
+
+	
+	/**
+	 * <code>userLogin</code> 메서드는 해당 로그인 요청이 사용자 계정과 일치하는지 판별하는 메서드입니다.
+	 * 
+	 * @param loginInfo
+	 *            : user_id, user_pw를 담은 Map
+	 * @return 로그인에 성공한다면 true, 그렇지 않다면 false.
+	 * @author 박세웅
+	 */
+	public boolean userLogin(Map<String, String> loginInfo) {
+		if (selectCustomer(loginInfo.get("user_id")) == null) {
+			return false;
+		}
+		return selectCustomer(loginInfo.get("user_id")).getPassword().equals(loginInfo.get("user_pw"));
+				//&& selectUser(loginInfo.get("user_id")).isActivate();
+	}
+	
+	
+	//CustomerVO 초기화 블럭
+	{
+		CustomerVO user1 = new CustomerVO();
+		user1.setCustomerID("minseon");
+		user1.setPassword("1111");
+		user1.setName("길민선");
+		customerList.add(user1);
+	
 		
-		c1.setCustomerID("aaaa1");
-		c1.setPassword("00001");
-		c1.setName("박상빈");
-		c1.setAddress("대전");
-		c1.setBirthday("930000-1000000");
-		c1.setPoint(10000);
-		
-		CustomerVO c2= new CustomerVO();
-		
-		c2.setCustomerID("aaaa2");
-		c2.setPassword("00001");
-		c2.setName("민선");
-		c2.setAddress("대전");
-		c2.setBirthday("930000-1000000");
-		c2.setPoint(10000);
-		
-		
-		CustomerVO c3= new CustomerVO();
-		
-		c3.setCustomerID("aaaa3");
-		c3.setPassword("00001");
-		c3.setName("원제");
-		c3.setAddress("대전");
-		c3.setBirthday("930000-1000000");
-		c3.setPoint(10000);
-		
-		
-		CustomerVO c4= new CustomerVO();
-		
-		c4.setCustomerID("aaaa4");
-		c4.setPassword("00001");
-		c4.setName("세웅");
-		c4.setAddress("대전");
-		c4.setBirthday("930000-1000000");
-		c4.setPoint(10000);
-		
-		CustomerVO c5= new CustomerVO();
-		
-		c5.setCustomerID("aaaa6");
-		c5.setPassword("00001");
-		c5.setName("학재");
-		c5.setAddress("대전");
-		c5.setBirthday("930000-1000000");
-		c5.setPoint(50000);
-		
-		
-		//cusVO에 손님 저장
-		cusVO.add(c1);
-		cusVO.add(c2);
-		cusVO.add(c3);
-		cusVO.add(c4);
-		cusVO.add(c5);
-		System.out.println(cusVO.toString()+"\r");
-		
-		System.out.println(cusVO.size());
-		
-		//날짜 구하는 방법
-		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-		
-		Calendar time = Calendar.getInstance();
-		
-		String format_time1 = format1.format(time.getTime());
-		
-		System.out.println(format_time1);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
 }
+
+

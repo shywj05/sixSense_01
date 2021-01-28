@@ -3,7 +3,7 @@ package package_VO;
 import java.util.Date;
 
 public class QuestionVO {
-	private int num;
+	private int seq_num;
 	private String customer_id;
 	private String date;
 	private String title;
@@ -11,11 +11,11 @@ public class QuestionVO {
 	private String answer;
 
 	public int getNum() {
-		return num;
+		return seq_num;
 	}
 
 	public void setNum(int num) {
-		this.num = num;
+		this.seq_num = num;
 	}
 
 	public String getCustomer_id() {

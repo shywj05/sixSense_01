@@ -5,6 +5,7 @@ public class ProductVO {
 	private String name;
 	private int price;
 	private int stock;
+	private int category_ID;
 	
 	
 	public int getProductID() {

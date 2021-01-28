@@ -1,6 +1,6 @@
 package package_VO;
 
-public class OrderedlistVO {
+public class OrderedListVO {
 	private int orderedListID;
 	private int orderNumber;
 	private int productID;
